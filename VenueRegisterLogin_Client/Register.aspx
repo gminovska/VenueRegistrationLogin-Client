@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Venue Login and Registration</title>
 </head>
 <body>
     <h1>Register Page</h1>
@@ -75,6 +75,12 @@
                     <td><asp:RequiredFieldValidator ID="WebFieldValidator" runat="server" ErrorMessage="* Web Page is required" ControlToValidate="WebPageTextBox"></asp:RequiredFieldValidator></td>
                     </tr>
                 <tr>
+                <tr>
+                <td>Age Restriction</td>
+                <td>
+                    <asp:TextBox ID="AgeTextBox" runat="server"></asp:TextBox>
+                </td>
+                    </tr>
                 <td>Venue User Name</td>
                 <td>
                     <asp:TextBox ID="VenueUserNameTextBox" runat="server"></asp:TextBox>
