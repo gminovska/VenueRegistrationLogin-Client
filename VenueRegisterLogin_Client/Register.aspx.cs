@@ -28,8 +28,17 @@ public partial class Register : System.Web.UI.Page
         v.VenuePhone = PhoneTextBox.Text;
         v.VenueEmail = EmailTextBox.Text;
         v.VenueWebPage = WebPageTextBox.Text;
+        v.VenueAgeRestriction = toNullableInt32(AgeTextBox.Text);
         string VenueUserName = VenueUserNameTextBox.Text;
         string VenuePassword = VenuePasswordTextBox.Text;
+        
+        //parsing a string into a nullable int
+        public static int? toNullableInt32(string s)
+        {
+        int i;
+        if (Int32.TryParse(s, out i)) return i;
+        return null;
+        }
 
 
         bool result = register.RegisterVenue(v, VenueUserName, VenuePassword);
